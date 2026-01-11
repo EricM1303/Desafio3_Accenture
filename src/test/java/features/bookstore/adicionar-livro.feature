@@ -12,7 +12,7 @@ Feature: Adicionar livro ao usuário
     # Pegar userID da feature
     * def userID = autenticacao.resultado.userID
 
-    @executar
+
     Scenario: Adicionar livro ao usuário com sucesso
       Given path '/BookStore/v1/Books'
       And request
@@ -28,3 +28,12 @@ Feature: Adicionar livro ao usuário
       """
       Then method post
       And status 201
+
+      * def resultado =
+      """
+      {
+        token: #(token),
+        userID: #(userID),
+        isbn: #(isbn)
+      }
+      """
