@@ -4,10 +4,10 @@ Feature: Gerar Token
     Given url baseUrl
     And header Content-Type = 'application/json'
 
-  @smoke
-  Scenario: Gerar token com sucesso
+  @executar
+  Scenario Outline: Gerar token com sucesso
     # Invocando dados da feature anterior | Executa independentemente de TAG
-    * def dados_usuario = <reuso-de-feature-anterior>
+    * def dados_usuario = <reusoFeature>
 
     # Pegar nome do usuário (Gerado da feature anterior)
     * def nome = dados_usuario.login.userName
@@ -16,7 +16,7 @@ Feature: Gerar Token
     * def senha = dados_usuario.login.password
 
     # Criação de novo JSON para buscar dados
-    * def login_usuario = <json-token-usuario>
+    * def login_usuario = <tokenUsuarioJson>
 
     Given path 'Account/v1/GenerateToken'
     And request login_usuario
@@ -30,5 +30,5 @@ Feature: Gerar Token
     And print autenticador
 
     Examples:
-      | json-token-usuario                                                 |  | reuso-de-feature-anterior                                     |
+      | tokenUsuarioJson                                                   |  | reusoFeature                                                  |
       | read('classpath:features/account/arquivosJson/token-usuario.json') |  | call read('classpath:features/account/criar-usuario.feature') |

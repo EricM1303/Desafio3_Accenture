@@ -1,4 +1,0 @@
-qa:
-  env: 'qa'
-  baseUrl: 'https://serverest.dev'
-  requestBody2: 'features/account/criar-sem-senha.json'

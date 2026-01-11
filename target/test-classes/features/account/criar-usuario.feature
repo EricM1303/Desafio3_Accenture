@@ -5,7 +5,7 @@ Feature: Criar Usuário
     And header Content-Type = 'application/json'
 
 
-  Scenario Outline: <nome-do-cenario>
+  Scenario Outline: <nomeCenario>
     # Determinar caminho da pasta UTILS (Clean code)
     * def Utils = Java.type('features.support.utils.Utils')
 
@@ -16,15 +16,15 @@ Feature: Criar Usuário
     * def senha = Utils.gerarSenha()
 
     # Incluindo esses dados capturados no JSON existente
-    * def requestBody = <json-usuario>
+    * def requestBody = <jsonUsuarioGerado>
 
     Given path 'Account/v1/User'
     When request requestBody
     Then method post
-    And status <status-esperado>
+    And status <statusEsperado>
 
-    * def login = <json-usuario>
+    * def login = <jsonUsuarioGerado>
 
     Examples:
-      | status-esperado |  | nome-do-cenario           |  | json-usuario                                                       |
-      | 201             |  | Criar usuário com sucesso |  | read('classpath:features/account/arquivosJson/criar-usuario.json') |
+      | statusEsperado |  | nomeCenario               |  | jsonUsuarioGerado                                                  |
+      | 201            |  | Criar usuário com sucesso |  | read('classpath:features/account/arquivosJson/criar-usuario.json') |

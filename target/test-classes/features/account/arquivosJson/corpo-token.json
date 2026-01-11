@@ -1,4 +1,0 @@
-{
-  "userName": #(usuario.userName),
-  "password": #(usuario.password)
-}
