@@ -37,3 +37,16 @@ Feature: Gerar Token
   }
   """
 
+    @executar
+    Scenario: Gerar token sem nome e senha
+      Given path 'Account/v1/GenerateToken'
+
+      And request
+    """
+    {
+      "userName": "",
+      "password": ""
+    }
+    """
+      When method post
+      Then status 400
