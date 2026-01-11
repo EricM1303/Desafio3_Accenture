@@ -33837,3 +33837,121 @@ classpath:features/account/gerar-token.feature:10
 
 00:15:35.205 [pool-2-thread-1] INFO  com.intuit.karate - [print] eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ikx1bmEgQ3Jlc3BvIiwicGFzc3dvcmQiOiIhM0BkN21ycFJ4N1hLMjNFMTAiLCJpYXQiOjE3NjgxMDEzMzF9.tta-2DJY-knIebN93obC6iN1jiU8ekf5kVN65iI3Fgo 
 00:15:36.100 [pool-3-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 6 (4 remaining) classpath:features/account/gerar-token.feature
+00:30:39.455 [main] ERROR c.intuit.karate.core.FeatureParser - not a valid feature file: features/account/gerar-token.feature - extraneous input '\r\n\r\n    Examples:' expecting {<EOF>, SCENARIO, SCENARIO_OUTLINE, TAGS, NEWLINE}
+00:31:07.247 [main] ERROR c.intuit.karate.core.FeatureParser - not a valid feature file: features/account/gerar-token.feature - extraneous input '\r\n\r\n    Examples:' expecting {<EOF>, SCENARIO, SCENARIO_OUTLINE, TAGS, NEWLINE}
+00:32:38.437 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+00:32:38.447 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768102358443
+00:32:38.454 [main] DEBUG com.intuit.karate.Suite - waiting for 7 features to complete
+00:32:40.464 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+00:32:40.467 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+00:32:41.393 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.demoqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 65
+1 > Host: bookstore.demoqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"Lorenzo Diegues","password":"qu3Z*15Rvhlz1!nxSj9vM"}
+
+00:39:11.180 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+00:39:11.211 [main] DEBUG com.intuit.karate.Suite - waiting for 7 features to complete
+00:39:13.927 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+00:39:13.932 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+00:39:15.193 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.demoqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 69
+1 > Host: bookstore.demoqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"Dra. Amanda Passarinho","password":"8KkJHQB8cr**ytU830"}
+
+00:39:16.827 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1617
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Sun, 11 Jan 2026 03:39:13 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 96
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"60-VL2usfjEuV9bz950Hj3w3Ze9tkY"
+{"userID":"94b8bc81-ffeb-4bd0-b2e0-f6644959dc13","username":"Dra. Amanda Passarinho","books":[]}
+
+00:39:16.868 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.demoqa.com/Account/v1/GenerateToken
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 33
+1 > Host: bookstore.demoqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"userName":null,"password":null}
+
+00:39:17.520 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 650
+1 < 400
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Sun, 11 Jan 2026 03:39:14 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 59
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"3b-kfIAtNk1nsLmMi3OoOPrbSi9YOU"
+{"code":"1200","message":"UserName and Password required."}
+
+00:39:17.546 [pool-2-thread-1] ERROR com.intuit.karate - classpath:features/account/gerar-token.feature:25
+And assert response.token != null
+did not evaluate to 'true': response.token != null
+classpath:features/account/gerar-token.feature:25
+00:39:19.075 [pool-3-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 3 of 7 (4 remaining) classpath:features/account/gerar-token.feature
+00:40:11.315 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+00:40:11.330 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768102811324
+00:40:11.343 [main] DEBUG com.intuit.karate.Suite - waiting for 7 features to complete
+00:40:13.429 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+00:40:13.432 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+00:40:14.430 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.demoqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 66
+1 > Host: bookstore.demoqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"Sarah Peres Jr.","password":"1oeDfc@#&4v&Vu^rODt7MW"}
+
+00:40:16.863 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 2411
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Sun, 11 Jan 2026 03:40:13 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 89
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"59-55N1uEmsIjdfE98wbDlZiuobp8o"
+{"userID":"61b29e0f-2f60-40d7-af45-8e0c6820771c","username":"Sarah Peres Jr.","books":[]}
+
+00:40:16.888 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.demoqa.com/Account/v1/GenerateToken
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 66
+1 > Host: bookstore.demoqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"Sarah Peres Jr.","password":"1oeDfc@#&4v&Vu^rODt7MW"}
+
+00:40:18.820 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1930
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Sun, 11 Jan 2026 03:40:15 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 301
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"12d-0Kw34bVTMDjWBtgnchpb6Tg/Zx4"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlNhcmFoIFBlcmVzIEpyLiIsInBhc3N3b3JkIjoiMW9lRGZjQCMmNHYmVnVeck9EdDdNVyIsImlhdCI6MTc2ODEwMjgxNX0.cblqqSIFWm61pz497IO2wmonvH7Qjagisno1An6y7Zk","expires":"2026-01-18T03:40:15.174Z","status":"Success","result":"User authorized successfully."}
+
+00:40:18.846 [pool-2-thread-1] INFO  com.intuit.karate - [print] eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlNhcmFoIFBlcmVzIEpyLiIsInBhc3N3b3JkIjoiMW9lRGZjQCMmNHYmVnVeck9EdDdNVyIsImlhdCI6MTc2ODEwMjgxNX0.cblqqSIFWm61pz497IO2wmonvH7Qjagisno1An6y7Zk 
+00:40:19.895 [pool-3-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 7 (4 remaining) classpath:features/account/gerar-token.feature
+00:47:10.228 [main] ERROR c.intuit.karate.core.FeatureParser - not a valid feature file: features/account/gerar-token.feature - extraneous input '\r\n\r\n    Examples:' expecting {<EOF>, SCENARIO, SCENARIO_OUTLINE, TAGS, NEWLINE}

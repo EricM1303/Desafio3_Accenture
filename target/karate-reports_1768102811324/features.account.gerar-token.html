@@ -38,8 +38,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">1</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
     </div>
   </div>
   <div id="nav-env">
@@ -49,12 +49,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2026-01-11 12:40:18 AM</div>
+    <div>2026-01-11 12:39:17 AM</div>
   </div>
 </div>
 
         <div class="nav-container">
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1:8]"><span>[1:8]</span> <span>Gerar token com sucesso</span></a>
           </div>
         </div>
@@ -80,8 +80,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>5342</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>3516</span>
             </div>
           </div>
           <div class="step-row">
@@ -113,8 +113,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">00:40:13.431 karate.env system property was: null 
-00:40:13.432 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">00:39:13.931 karate.env system property was: null 
+00:39:13.932 karate.env system property was: null 
 </div>   
 
   
@@ -134,7 +134,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>header Content-Type = &#39;application/json&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">5</div>
   </div>
 
    
@@ -169,7 +169,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def dados_usuario = call read(&#39;classpath:features/account/criar-usuario.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">3367</div>
+    <div class="time-cell passed">2817</div>
   </div>
 
    
@@ -188,7 +188,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <div class="step-indent"></div>
         <div class="step-cell passed">features.account.criar-usuario</div>
       </div>
-      <div class="time-cell passed">3339</div>
+      <div class="time-cell passed">2779</div>
     </div>
     <div>
       <div><div>
@@ -267,7 +267,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def Utils = Java.type(&#39;features.support.utils.Utils&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">11</div>
+    <div class="time-cell passed">20</div>
   </div>
 
    
@@ -302,7 +302,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def nome = Utils.gerarNome()</span>
       </div>
     </div>
-    <div class="time-cell passed">262</div>
+    <div class="time-cell passed">345</div>
   </div>
 
    
@@ -337,7 +337,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def senha = Utils.gerarSenha()</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -372,7 +372,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def requestBody = read(&#39;classpath:features/account/arquivosJson/criar-usuario.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">87</div>
+    <div class="time-cell passed">103</div>
   </div>
 
    
@@ -400,7 +400,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>Given</span>&nbsp;<span>path &#39;Account/v1/User&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -456,7 +456,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>Then</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">2966</div>
+    <div class="time-cell passed">2287</div>
   </div>
 
    
@@ -465,26 +465,26 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.10.0.call.1.23">00:40:14.430 request:
+  <div class="preformatted" data-parent="0.10.0.call.1.23">00:39:15.193 request:
 1 &gt; POST https://bookstore.demoqa.com/Account/v1/User
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 66
+1 &gt; Content-Length: 69
 1 &gt; Host: bookstore.demoqa.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;userName&quot;:&quot;Sarah Peres Jr.&quot;,&quot;password&quot;:&quot;1oeDfc@#&amp;4v&amp;Vu^rODt7MW&quot;}
+{&quot;userName&quot;:&quot;Dra. Amanda Passarinho&quot;,&quot;password&quot;:&quot;8KkJHQB8cr**ytU830&quot;}
 
-00:40:16.864 response time in milliseconds: 2411
+00:39:16.828 response time in milliseconds: 1617
 1 &lt; 201
 1 &lt; Server: nginx/1.17.10 (Ubuntu)
-1 &lt; Date: Sun, 11 Jan 2026 03:40:13 GMT
+1 &lt; Date: Sun, 11 Jan 2026 03:39:13 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 89
+1 &lt; Content-Length: 96
 1 &lt; Connection: keep-alive
 1 &lt; X-Powered-By: Express
-1 &lt; ETag: W/&quot;59-55N1uEmsIjdfE98wbDlZiuobp8o&quot;
-{&quot;userID&quot;:&quot;61b29e0f-2f60-40d7-af45-8e0c6820771c&quot;,&quot;username&quot;:&quot;Sarah Peres Jr.&quot;,&quot;books&quot;:[]}
+1 &lt; ETag: W/&quot;60-VL2usfjEuV9bz950Hj3w3Ze9tkY&quot;
+{&quot;userID&quot;:&quot;94b8bc81-ffeb-4bd0-b2e0-f6644959dc13&quot;,&quot;username&quot;:&quot;Dra. Amanda Passarinho&quot;,&quot;books&quot;:[]}
 
 </div>   
 
@@ -505,7 +505,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>status 201</span>
       </div>
     </div>
-    <div class="time-cell passed">6</div>
+    <div class="time-cell passed">11</div>
   </div>
 
    
@@ -530,10 +530,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">26</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def login = read(&#39;classpath:features/account/arquivosJson/criar-usuario.json&#39;)</span>
+        <span>*</span>&nbsp;<span>def login = json-usuario</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -573,7 +573,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def nome = dados_usuario.login.userName</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">6</div>
   </div>
 
    
@@ -643,7 +643,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def login_usuario = read(&#39;classpath:features/account/arquivosJson/token-usuario.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">6</div>
   </div>
 
    
@@ -699,7 +699,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>request login_usuario</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -727,7 +727,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">1936</div>
+    <div class="time-cell passed">656</div>
   </div>
 
    
@@ -736,26 +736,26 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.23">00:40:16.889 request:
+  <div class="preformatted" data-parent="0.23">00:39:16.869 request:
 1 &gt; POST https://bookstore.demoqa.com/Account/v1/GenerateToken
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 66
+1 &gt; Content-Length: 33
 1 &gt; Host: bookstore.demoqa.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;userName&quot;:&quot;Sarah Peres Jr.&quot;,&quot;password&quot;:&quot;1oeDfc@#&amp;4v&amp;Vu^rODt7MW&quot;}
+{&quot;userName&quot;:null,&quot;password&quot;:null}
 
-00:40:18.820 response time in milliseconds: 1930
-1 &lt; 200
+00:39:17.520 response time in milliseconds: 650
+1 &lt; 400
 1 &lt; Server: nginx/1.17.10 (Ubuntu)
-1 &lt; Date: Sun, 11 Jan 2026 03:40:15 GMT
+1 &lt; Date: Sun, 11 Jan 2026 03:39:14 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 301
+1 &lt; Content-Length: 59
 1 &lt; Connection: keep-alive
 1 &lt; X-Powered-By: Express
-1 &lt; ETag: W/&quot;12d-0Kw34bVTMDjWBtgnchpb6Tg/Zx4&quot;
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlNhcmFoIFBlcmVzIEpyLiIsInBhc3N3b3JkIjoiMW9lRGZjQCMmNHYmVnVeck9EdDdNVyIsImlhdCI6MTc2ODEwMjgxNX0.cblqqSIFWm61pz497IO2wmonvH7Qjagisno1An6y7Zk&quot;,&quot;expires&quot;:&quot;2026-01-18T03:40:15.174Z&quot;,&quot;status&quot;:&quot;Success&quot;,&quot;result&quot;:&quot;User authorized successfully.&quot;}
+1 &lt; ETag: W/&quot;3b-kfIAtNk1nsLmMi3OoOPrbSi9YOU&quot;
+{&quot;code&quot;:&quot;1200&quot;,&quot;message&quot;:&quot;UserName and Password required.&quot;}
 
 </div>   
 
@@ -777,13 +777,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.25">
-      <div class="step-ref passed">25</div>
+      <div class="step-ref failed">25</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>And</span>&nbsp;<span>assert response.token != null</span>
       </div>
     </div>
-    <div class="time-cell passed">19</div>
+    <div class="time-cell failed">21</div>
   </div>
 
    
@@ -792,7 +792,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.25">00:39:17.546 classpath:features/account/gerar-token.feature:25
+And assert response.token != null
+did not evaluate to &#39;true&#39;: response.token != null
+classpath:features/account/gerar-token.feature:25
+</div>   
 
   
 
@@ -805,13 +809,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.26">
-      <div class="step-ref passed">26</div>
+      <div class="step-ref skipped">26</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -833,13 +837,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.27">
-      <div class="step-ref passed">27</div>
+      <div class="step-ref skipped">27</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>And</span>&nbsp;<span>def autenticador = response.token</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -868,13 +872,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.30">
-      <div class="step-ref passed">30</div>
+      <div class="step-ref skipped">30</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>And</span>&nbsp;<span>print autenticador</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -883,8 +887,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.30">00:40:18.847 [print] eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlNhcmFoIFBlcmVzIEpyLiIsInBhc3N3b3JkIjoiMW9lRGZjQCMmNHYmVnVeck9EdDdNVyIsImlhdCI6MTc2ODEwMjgxNX0.cblqqSIFWm61pz497IO2wmonvH7Qjagisno1An6y7Zk 
-</div>   
+     
 
   
 

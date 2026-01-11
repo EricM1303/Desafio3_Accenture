@@ -1,4 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: features.KarateTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.977 s - in features.KarateTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.774 s <<< FAILURE! - in features.KarateTest
+features.KarateTest.testParallel  Time elapsed: 3.715 s  <<< ERROR!
+java.lang.RuntimeException: extraneous input '\r\n\r\n    Examples:' expecting {<EOF>, SCENARIO, SCENARIO_OUTLINE, TAGS, NEWLINE}
+	at com.intuit.karate.core.FeatureParser.parse(FeatureParser.java:74)
+	at com.intuit.karate.core.Feature.read(Feature.java:63)
+	at com.intuit.karate.resource.ResourceUtils.findFeatureFiles(ResourceUtils.java:95)
+	at com.intuit.karate.Runner$Builder.resolveAll(Runner.java:249)
+	at com.intuit.karate.Suite.<init>(Suite.java:171)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:516)
+	at features.KarateTest.testParallel(KarateTest.java:17)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

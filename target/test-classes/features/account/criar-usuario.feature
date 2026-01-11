@@ -16,15 +16,15 @@ Feature: Criar Usuário
     * def senha = Utils.gerarSenha()
 
     # Incluindo esses dados capturados no JSON existente
-    * def requestBody = read('classpath:features/account/arquivosJson/criar-usuario.json')
+    * def requestBody = <json-usuario>
 
     Given path 'Account/v1/User'
     When request requestBody
     Then method post
     And status <status-esperado>
 
-    * def login = { userName: #(nome), password: #(senha) }
+    * def login = <json-usuario>
 
     Examples:
-      | status-esperado |  | nome-do-cenario           |
-      | 201             |  | Criar usuário com sucesso |
+      | status-esperado |  | nome-do-cenario           |  | json-usuario                                                       |
+      | 201             |  | Criar usuário com sucesso |  | read('classpath:features/account/arquivosJson/criar-usuario.json') |
