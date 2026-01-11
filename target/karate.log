@@ -1,0 +1,140 @@
+17:01:07.902 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+17:01:07.918 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+17:01:09.612 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+17:01:09.615 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+17:01:10.399 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.demoqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 73
+1 > Host: bookstore.demoqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"Patricia da Nóbrega Filho","password":"@q$*Gb7J!s3X7DVI0v"}
+
+17:01:12.679 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 2272
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Sun, 11 Jan 2026 20:01:11 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 100
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"64-cWXqOi7m8H1366DLz4eF20xjW1o"
+{"userID":"cf69eec6-9f02-49d3-a85e-8607cce2528b","username":"Patricia da Nóbrega Filho","books":[]}
+
+17:01:12.704 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.demoqa.com/Account/v1/GenerateToken
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 73
+1 > Host: bookstore.demoqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"Patricia da Nóbrega Filho","password":"@q$*Gb7J!s3X7DVI0v"}
+
+17:01:14.818 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 2111
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Sun, 11 Jan 2026 20:01:13 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 310
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"136-+Tkp4ZmLnWOUtD1PZs9BQpd3e9M"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlBhdHJpY2lhIGRhIE7Ds2JyZWdhIEZpbGhvIiwicGFzc3dvcmQiOiJAcSQqR2I3SiFzM1g3RFZJMHYiLCJpYXQiOjE3NjgxNjE2NzJ9.eRFHaPCpmS-JYnm75tI0efqqBsba4NgDrxZNPDkxBU0","expires":"2026-01-18T20:01:12.461Z","status":"Success","result":"User authorized successfully."}
+
+17:01:14.849 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.demoqa.com/Account/v1/User/cf69eec6-9f02-49d3-a85e-8607cce2528b
+1 > Content-Type: application/json
+1 > Host: bookstore.demoqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+17:01:16.042 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1192
+1 < 401
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Sun, 11 Jan 2026 20:01:14 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"30-V67npMN18Zy3bnk1xW2xtLGgx8c"
+{"code":"1200","message":"User not authorized!"}
+
+17:01:16.049 [pool-2-thread-1] ERROR com.intuit.karate - classpath:features/account/deletar-usuario.feature:30
+Then status 204
+status code was: 401, expected: 204, response time in milliseconds: 1192, url: https://bookstore.demoqa.com/Account/v1/User/cf69eec6-9f02-49d3-a85e-8607cce2528b, response: 
+{"code":"1200","message":"User not authorized!"}
+classpath:features/account/deletar-usuario.feature:30
+17:01:16.967 [pool-3-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 3 (1 remaining) classpath:features/account/deletar-usuario.feature
+17:01:39.709 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+17:01:39.718 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768161699715
+17:01:39.724 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+17:01:41.112 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+17:01:41.115 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+17:01:41.818 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.demoqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 62
+1 > Host: bookstore.demoqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"Aurora Marques","password":"XZ7uADGWW3Tss8I1rs^"}
+
+17:01:44.218 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 2395
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Sun, 11 Jan 2026 20:01:42 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 88
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-UlupjHU515Zpc0g9v9MK0EsawXI"
+{"userID":"95b3d83b-e78f-4902-9b48-25fa0f467321","username":"Aurora Marques","books":[]}
+
+17:01:44.240 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.demoqa.com/Account/v1/GenerateToken
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 62
+1 > Host: bookstore.demoqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"Aurora Marques","password":"XZ7uADGWW3Tss8I1rs^"}
+
+17:01:45.725 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1483
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Sun, 11 Jan 2026 20:01:44 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 296
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"128-2DCQN/0yOsXMAxVTanoHbrQDacU"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkF1cm9yYSBNYXJxdWVzIiwicGFzc3dvcmQiOiJYWjd1QURHV1czVHNzOEkxcnNeIiwiaWF0IjoxNzY4MTYxNzAzfQ.2KzCQBU4aDcEGT8Czo7TrU2th5VE6GpcFpnECIfVue8","expires":"2026-01-18T20:01:43.786Z","status":"Success","result":"User authorized successfully."}
+
+17:01:45.756 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.demoqa.com/Account/v1/User/95b3d83b-e78f-4902-9b48-25fa0f467321
+1 > Content-Type: application/json
+1 > Host: bookstore.demoqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/25.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+17:01:46.775 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1017
+1 < 401
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Sun, 11 Jan 2026 20:01:45 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"30-V67npMN18Zy3bnk1xW2xtLGgx8c"
+{"code":"1200","message":"User not authorized!"}
+
+17:01:47.751 [pool-3-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 3 (1 remaining) classpath:features/account/deletar-usuario.feature
