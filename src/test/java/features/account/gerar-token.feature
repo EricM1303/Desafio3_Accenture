@@ -4,7 +4,10 @@ Feature: Gerar Token
     Given url baseUrl
     And header Content-Type = 'application/json'
     * def dados_usuario = call read('classpath:features/account/criar-usuario.feature')
+
+    # Pegar nome do usuário de criar-usuario.feature
     * def nome = dados_usuario.login.userName
+    # Pegar nome do usuário de criar-usuario.feature
     * def senha = dados_usuario.login.password
 
 
