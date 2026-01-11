@@ -15,7 +15,7 @@ Feature: Gerar Token
     # Pegar senha do usuário (Gerado do feature anterior)
     * def senha = dados_usuario.login.password
 
-    # Setar esses novos dados no JSON novo
+    # Criação de novo JSON para buscar dados
     * def login_usuario = read('classpath:features/account/arquivosJson/token-usuario.json')
 
     Given path 'Account/v1/GenerateToken'
