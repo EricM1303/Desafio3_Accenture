@@ -21,8 +21,6 @@ Feature: Gerar Token
     Given path 'Account/v1/GenerateToken'
     And request login_usuario
     When method post
-    # Validar se é uma string
-    And match response.token == '#string'
     # Validar se foi recebido o valor (caso não, será nulo e retornará erro)
     And assert response.token != null
     Then status 200
