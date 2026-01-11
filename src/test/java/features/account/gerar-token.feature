@@ -4,7 +4,7 @@ Feature: Gerar Token
     Given url baseUrl
     And header Content-Type = 'application/json'
 
-  @smoke
+  @executar
   Scenario: Gerar token com sucesso
     # Invocando dados da feature anterior | Executa independentemente de TAG
     * def dados_usuario = <reuso-de-feature-anterior>
