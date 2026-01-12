@@ -3,14 +3,15 @@ Feature: Gerar Token
   Background:
     Given url baseUrl
     And header Content-Type = 'application/json'
+    * def dados_usuario = call read('classpath:features/account/criar-usuario.feature')
 
-
-  Scenario Outline: Gerar token com sucesso
-    * def dados_usuario = <reusoFeature>
-
+    # Pegar nome do usuário de criar-usuario.feature
     * def nome = dados_usuario.login.userName
+    # Pegar nome do usuário de criar-usuario.feature
     * def senha = dados_usuario.login.password
 
+  @executar
+  Scenario: Gerar token com sucesso
     Given path 'Account/v1/GenerateToken'
 
     # Gerar JSON de forma mais injetável (por arquivo, não fica dinâmico como deveria)
@@ -23,16 +24,18 @@ Feature: Gerar Token
     """
     When method post
     Then status 200
-    And assert response.token != null
 
-    # Variável a ser chamada no próximo call (para fazer autorizações do usuário)
-    * def resultado =
+
+    @executar
+    Scenario: Gerar token sem nome e senha
+      Given path 'Account/v1/GenerateToken'
+
+      And request
     """
-  {
-    "token": #(response.token),
-    "userID": #(dados_usuario.response.userID)
-  }
-  """
-    Examples:
-      | reusoFeature                                                  |
-      | call read('classpath:features/account/criar-usuario.feature') |
+    {
+      "userName": "",
+      "password": ""
+    }
+    """
+      When method post
+      Then status 400

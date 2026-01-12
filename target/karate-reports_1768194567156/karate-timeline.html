@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-2-thread-1","id":1},{"content":"pool-2-thread-2","id":2},{"content":"pool-2-thread-3","id":3},{"content":"pool-2-thread-4","id":4},{"content":"pool-2-thread-5","id":5}];
+var items = [{"id":1,"group":1,"content":"features\/account\/criar-usuario[1.1:27]","start":1768194129407,"end":1768194133058,"title":"features\/account\/criar-usuario[1.1:27] 02:02:09.407-02:02:13.058 Criar usuário com sucesso"},{"id":2,"group":2,"content":"features\/account\/criar-usuario[2:30]","start":1768194129407,"end":1768194131421,"title":"features\/account\/criar-usuario[2:30] 02:02:09.407-02:02:11.421 Criar usuário com senha inválida"},{"id":3,"group":3,"content":"features\/account\/deletar-usuario[1:13]","start":1768194129407,"end":1768194135501,"title":"features\/account\/deletar-usuario[1:13] 02:02:09.407-02:02:15.501 Deletar usuário com sucesso"},{"id":4,"group":4,"content":"features\/account\/deletar-usuario[2:23]","start":1768194129407,"end":1768194136524,"title":"features\/account\/deletar-usuario[2:23] 02:02:09.407-02:02:16.524 Deletar usuário sem autenticação"},{"id":5,"group":5,"content":"features\/account\/gerar-token[1:14]","start":1768194129408,"end":1768194135370,"title":"features\/account\/gerar-token[1:14] 02:02:09.408-02:02:15.370 Gerar token com sucesso"},{"id":6,"group":2,"content":"features\/account\/gerar-token[2:30]","start":1768194131429,"end":1768194134453,"title":"features\/account\/gerar-token[2:30] 02:02:11.429-02:02:14.453 Gerar token sem nome e senha"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

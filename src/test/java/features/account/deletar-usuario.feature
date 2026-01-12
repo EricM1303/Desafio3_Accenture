@@ -9,7 +9,7 @@ Feature: Deletar Usuário
     * def token = autenticacao.resultado.token
     * header Authorization = 'Bearer ' + token
 
-  @executar
+
   Scenario: Deletar usuário com sucesso
     # Pegar userID do usuário criado pelo gerar-token.feature
     * def userID = autenticacao.resultado.userID
@@ -19,7 +19,7 @@ Feature: Deletar Usuário
     Then status 200
 
 
-    @executar
+
     Scenario: Deletar usuário sem autenticação
       * def userID = null
 

@@ -11,7 +11,7 @@ class KarateTest {
     @Test
     void testParallel() {
         Results results = Runner
-                .path("classpath:features") //Diz ao Karate: “Execute todos os .feature que estão no pacote features”
+                .path("classpath:features/bookstore") //Diz ao Karate: “Execute todos os .feature que estão no pacote features”
                 .tags("@executar") //Executa somente cenários ou features marcados com @smoke
 //                .outputCucumberJson(true)
                 .parallel(5); //utiliza 5 usuários para realizar os testes

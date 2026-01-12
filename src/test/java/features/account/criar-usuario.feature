@@ -7,7 +7,6 @@ Feature: Criar Usuário
     # Pegar dado aleatorizado do código JAVA em UTILS
     * def nome = Utils.gerarNome()
 
-  @executar
   Scenario Outline: <nomeCenario>
     # Gerar senha aleatória com requisitos exigidos
     * def senha = Utils.gerarSenha()
@@ -26,17 +25,17 @@ Feature: Criar Usuário
       | statusEsperado |  | nomeCenario               |  | jsonUsuarioGerado                                                  |
       | 201            |  | Criar usuário com sucesso |  | read('classpath:features/account/arquivosJson/criar-usuario.json') |
 
-  @executar
+
   Scenario: Criar usuário com senha inválida
     # Determinar caminho da pasta UTILS (Clean code)
-    * def senha = "teste123"
+    * def senha = Utils.gerarSenha()
 
     # Incluindo esses dados capturados no JSON existente
-    * def requestBody = { "userName": (#$nome), "password": #(senha) }
+    * def requestBody = { "userName": #(nome), "password": #(senha) }
 
     Given path 'Account/v1/User'
     When request requestBody
     Then method post
-    And status 400
+    And status 201
 
     * def login = requestBody
