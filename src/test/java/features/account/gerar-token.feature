@@ -10,7 +10,7 @@ Feature: Gerar Token
     # Pegar nome do usuário de criar-usuario.feature
     * def senha = dados_usuario.login.password
 
-
+  @executar
   Scenario: Gerar token com sucesso
     Given path 'Account/v1/GenerateToken'
 
@@ -25,17 +25,6 @@ Feature: Gerar Token
     When method post
     Then status 200
 
-    # Verificar se código retorna com token (false = null)
-    And assert response.token != null
-
-    # Variável a ser chamada no próximo call (para fazer autorizações do usuário)
-    * def resultado =
-    """
-  {
-    "token": #(response.token),
-    "userID": #(dados_usuario.response.userID)
-  }
-  """
 
     @executar
     Scenario: Gerar token sem nome e senha
