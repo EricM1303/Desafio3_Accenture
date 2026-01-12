@@ -10,6 +10,10 @@ Feature: Listar catálogo de livros
       When method get
       Then status <statusCode>
 
+      Examples:
+        |statusCode|
+        |200       |
+
 
     Scenario Outline: Listar catálogo e validar response
       Given path '/BookStore/v1/Books'
