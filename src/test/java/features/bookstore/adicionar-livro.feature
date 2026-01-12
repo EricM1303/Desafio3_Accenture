@@ -34,6 +34,5 @@ Feature: Adicionar livro ao usuário
       {
         token: #(token),
         userID: #(userID),
-        isbn: #(isbn)
       }
       """
