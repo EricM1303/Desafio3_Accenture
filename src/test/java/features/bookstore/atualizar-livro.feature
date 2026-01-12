@@ -8,21 +8,22 @@ Feature: Atualizar livro
 
     * def token = dados.resultado.token
     * def userID = dados.resultado.userID
-    * def isbn = dados.resultado.isbn
-
+    # Autorização do usuário criado na feature anterior
     * header Authorization = 'Bearer ' + token
 
 
-
   Scenario: Atualizar livro com sucesso
-    Given path 'BookStore/v1/Books/' + "9781449365035"
+    # Alteração manual de livro ao usuário
+    Given path 'BookStore/v1/Books/' + "9781491904244"
     And request
   """
   {
     "userId": "#(userID)",
-    "isbn": "#(isbn)"
+    "isbn": "9781449365035"
   }
   """
     When method put
     Then status 200
     And print response
+    # Validar array da response API
+    And match response.books[0].isbn == '#string'
